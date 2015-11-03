@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="Tim Nguyen">
+  <title>Guessing Game</title>
+</head>
+<body>
+<h1>Guessing Game - JavaScript</h1>
+<h2>What the JavaScript on this page is doing.</h2>
+<p>Below are the steps and their explanations.</p>
+<ol>
+  <li>The rightAnsCounter variable stores how many time the user answered correctly, it starts out at 0.</li><br />
+  <li>The prompt("what is your name") method prompts the user for his/her name and stores it in the userName variable.</li><br />
+  <li>The while loop is used to require the user to input a name.</li><br />
+  <li>The alert("Hi " + userName + "! Nice to ...) method takes the user's name from the userName variable and concatenate the user's name with a greeting string, then displays the message to the user in a an alert box.</li><br />
+  <li>The First guessing game question is asked with the prompt() method, then stores the user's answer to answer1 variable.</li><br />
+  <li>The while loop is then used to ensure the user only inputs yes or no. If other than yes or no is inputed, the user is alerted with "Invalid answer!..." and then prompts the user to answer the question again.</li><br />
+  <li>The toLowerCase() method is used to convert the user's answer to all lowercase for proper comparison. </li><br />
+  <li>The if else statement then evaluate the user's answer to the question. If user's answer is correct, 1 is added to the rightAnsCounter. This process repeats for question 2 and question 3.</li><br />
+  <li></li><br />
+  <li>The last alert() method tells the user how many questions he/she got right by concatenating the rightAnsCounter to "to correct answers out of 3 questions".</li><br />
+
+</ol>
+<script type="text/javascript" src="game.js"></script>
+</body>
+</html>
