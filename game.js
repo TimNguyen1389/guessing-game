@@ -3,6 +3,7 @@
 
   //variable to store user's name to personalize response.
   var userName = prompt("What is your name?");
+  console.log("The user's name is " + userName);
 
   //use while loop to check for empty value/string.
   while (userName == false) {
@@ -69,10 +70,10 @@
   //variable to store user's answer to how old question.
   var howOld;
 
-  //use while loop - if answer is incorrect and number of guesses are under 3
+  //use while loop - if answer is incorrect and number of guesses is under 3
   //prompt to user to guess again. Display the number of guesses left by guessNumCounter
-  //from 3. ParseInt return string to integer.
-  while ((parseInt(howOld) !== 44) && (guessNumCounter < 3)) {
+  //from 3. ParseInt return string to integer using base/radix of 10.
+  while ((parseInt(howOld, 10) !== 44) && (guessNumCounter < 3)) {
     howOld = prompt("Guess how old am I? You get 3 tries! You have " + (3 - guessNumCounter) + " guess(es) left!");
     //add 1 to guessNumCounter.
     guessNumCounter++;
@@ -81,18 +82,18 @@
       alert(howOld + " is not a number!");
     }
     //if user's answer is 44
-    else if(parseInt(howOld) === 44) {
+    else if(parseInt(howOld, 10) === 44) {
       alert("You guessed it! I am 44 years old! :( ");
       //add 1 to rightAnsCounter
       rightAnsCounter++;
     }
     //if user's answer is greater than 44
-    else if (parseInt(howOld) > 44) {
-      alert(howOld + " is too high.")
+    else if (parseInt(howOld, 10) > 44) {
+      alert(howOld + " is too high.");
     }
-    //if user's answer is less than 44 or anything else.
+    //user's answer is less than 44 or anything else.
     else {
-      alert(howOld + " is too low.")
+      alert(howOld + " is too low.");
     }
   }
   //fifth question
@@ -107,5 +108,44 @@
   } else {
     alert("I'm sorry you're having such a bad day, " + userName + "!")
   }
+
+  alert("Be a sport and guess the answer to one more question!")
+
+  //computer generated random number from 1 to 10.
+  var guessNum = Math.floor((Math.random() * 10) + 1);
+  console.log(guessNum);
+
+  //number of guesses counter
+  var guessNumCounter2 = 0;
+
+  //user's guessed number
+  var guessNumAns;
+
+  //while loop - if answer is incorrect and number of guesses is under 3
+  //prompt to user to guess again. Display the number of guesses left by guessNumCounter2
+  //from 3. ParseInt return string to integer using base/radix of 10.
+  while ((parseInt(guessNumAns, 10) !== guessNum) && (guessNumCounter2 < 3)) {
+    guessNumAns = prompt("Guess what number(from 1 to 10) I'm thinking of? You get 3 guesses. You have " + (3 - guessNumCounter2) + " guess(es) left!");
+    guessNumCounter2++;
+
+    //alert if guessNumAns is not a number.
+    if(isNaN(guessNumAns)) {
+      alert(guessNumAns + " is not a number!");
+    }
+    //if user's guessNumAns is equal to random guessNum
+    else if(parseInt(guessNumAns, 10) === guessNum) {
+      alert("You got it! The number I'm thinking of is " + guessNum + "!");
+      rightAnsCounter++;
+    }
+    //if user's guessNumAns is greater than random guessNum
+    else if(parseInt(guessNumAns, 10) > guessNum) {
+      alert(guessNumAns + " is too high.");
+    }
+    else {
+    //user's guessNumAns is less than random guessNum or anything else.
+      alert(guessNumAns + " is too low");
+    }
+  }
+
   //Display how many questions user answered correctly.
-  alert(userName + ", you got " + rightAnsCounter + " correct answers out of 3 questions. Thanks for playing!");
+  alert(userName + ", you got " + rightAnsCounter + " correct answers out of 5 questions. Thanks for playing!");
