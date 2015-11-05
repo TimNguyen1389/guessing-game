@@ -121,8 +121,8 @@
   var guessNum = Math.floor((Math.random() * 10) + 1);
   console.log(guessNum);
 
-  //number of guesses counter
-  var guessNumCounter2 = 0;
+  //reset number of guesses counter
+  guessNumCounter = 0;
 
   //user's guessed number
   var guessNumAns;
@@ -130,9 +130,9 @@
   //while loop - if answer is incorrect and number of guesses is under 3
   //prompt to user to guess again. Display the number of guesses left by guessNumCounter2
   //from 3. ParseInt return string to integer using base/radix of 10.
-  while ((parseInt(guessNumAns, 10) !== guessNum) && (guessNumCounter2 < 3)) {
-    guessNumAns = prompt("I am thinking of a number from 1 to 10. Guess what number it is? You get 3 guesses. You have " + (3 - guessNumCounter2) + " guess(es) left!");
-    guessNumCounter2++;
+  while ((parseInt(guessNumAns, 10) !== guessNum) && (guessNumCounter < 3)) {
+    guessNumAns = prompt("I am thinking of a number from 1 to 10. Guess what number it is? You get 3 guesses. You have " + (3 - guessNumCounter) + " guess(es) left!");
+    guessNumCounter++;
 
     //alert if guessNumAns is not a number.
     if(isNaN(guessNumAns)) {
