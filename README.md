@@ -5,6 +5,7 @@
 ### How the game works.
 - You will be asked 3 yes/no questions about the author.
 - You will be asked to guess the author's age. You get 3 guesses.
+- You will be asked to guess a number the author is thinking of. You get 3 guesses.
 - You will receive a response after each answer.
 - Your score will be given to you at the end of the game.
 - Questions are presented in a prompt box.
