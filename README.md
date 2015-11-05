@@ -14,6 +14,17 @@
 
 www.w3schools.com and JavaScript & JQuery by Jon Duckett are used as references when I am stuck.
 
+**Oh, here is a joke I heard from my 10 year old son.**
+
+On the first day of class, a teacher starts by saying, "Everyone who thinks they're stupid, stand up!"
+
+After a moment of silence, little Johnny stood up. The teacher asks, "Why do you think you're stupid, Johnny?"
+
+Little Johnny said, "I don't think I'm stupid, I just felt bad you're standing there all by yourself."
+
+Lol!!!... Not sure if I'm retelling the joke correctly, but it was really funny when my son told it, though!
+
+
 Author: Tim Nguyen
 
 
