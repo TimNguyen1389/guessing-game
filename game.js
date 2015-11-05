@@ -14,6 +14,7 @@
   //concantenate user's name to greeting string.
   alert("Hi " + userName + "! Nice to meet you! Let's play a guessing game! You will guess 3 things about me!");
 
+  //first question
   //variable to store user's answer to question number 1.
   var answer1 = prompt("Am I taller than 5'6?");
 
@@ -36,6 +37,7 @@
   //log user input to console.
   console.log("The user inputted " + answer1 + " to question 1.");
 
+  //second question
   //repeat coding steps used in question/answer 1.
   var answer2 = prompt("Do I weigh over 130 pounds?");
   while (answer2.toLowerCase() != "yes" && answer2.toLowerCase() != "no") {
@@ -50,6 +52,7 @@
   }
   console.log("The user inputted " + answer2 + " to question 2.");
 
+  //third question
   //repeat coding steps used in question/answer 1.
   var answer3 = prompt("Am I over 40 years old?");
   while (answer3.toLowerCase() != "yes" && answer3.toLowerCase() != "no") {
@@ -64,6 +67,7 @@
   }
   console.log("The user inputted " + answer3 + " to question 3.");
 
+  //fourth question
   //variable to counter for how many guesses.
   var guessNumCounter = 0;
 
@@ -96,6 +100,7 @@
       alert(howOld + " is too low.");
     }
   }
+
   //fifth question
   //same coding steps as question/answer 1.
   var haveFunAns = prompt("Did you enjoy playing this game?");
@@ -109,6 +114,7 @@
     alert("I'm sorry you're having such a bad day, " + userName + "!")
   }
 
+  //sixth question
   alert("Be a sport and guess the answer to one more question!")
 
   //computer generated random number from 1 to 10.
@@ -125,7 +131,7 @@
   //prompt to user to guess again. Display the number of guesses left by guessNumCounter2
   //from 3. ParseInt return string to integer using base/radix of 10.
   while ((parseInt(guessNumAns, 10) !== guessNum) && (guessNumCounter2 < 3)) {
-    guessNumAns = prompt("Guess what number(from 1 to 10) I'm thinking of? You get 3 guesses. You have " + (3 - guessNumCounter2) + " guess(es) left!");
+    guessNumAns = prompt("I am thinking of a number from 1 to 10. Guess what number it is? You get 3 guesses. You have " + (3 - guessNumCounter2) + " guess(es) left!");
     guessNumCounter2++;
 
     //alert if guessNumAns is not a number.
