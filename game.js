@@ -1,12 +1,12 @@
   //variable to store counter for correct answers.
-  var rightAnsCounter = 0
+  var rightAnsCounter = 0;
 
   //variable to store user's name to personalize response.
   var userName = prompt("What is your name?");
   console.log("The user's name is " + userName);
 
   //use while loop to check for empty value/string.
-  while (userName == false) {
+  while (userName === false) {
     alert("Oops! You forgot to enter your name.");
     userName = prompt("What is your name?");
   }
@@ -31,7 +31,7 @@
     //add 1 to rightAnsCounter if answer is correct.
     rightAnsCounter++;
   } else {
-    alert("You answered yes. That is incorrect, " + userName + ". I am not taller than 5'6. I am 5'5.")
+    alert("You answered yes. That is incorrect, " + userName + ". I am not taller than 5'6. I am 5'5.");
   }
 
   //log user input to console.
@@ -109,13 +109,13 @@
     haveFunAns = prompt("Did you enjoy playing this game?");
   }
   if(haveFunAns.toLowerCase() == "yes") {
-    alert("Awesome! I'm glad you're having fun!")
+    alert("Awesome! I'm glad you're having fun!");
   } else {
-    alert("I'm sorry you're having such a bad day, " + userName + "!")
+    alert("I'm sorry you're having such a bad day, " + userName + "!");
   }
 
   //sixth question
-  alert("Be a sport and guess the answer to one more question!")
+  alert("Be a sport and guess the answer to one more question!");
 
   //computer generated random number from 1 to 10.
   var guessNum = Math.floor((Math.random() * 10) + 1);
