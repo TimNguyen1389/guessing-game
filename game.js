@@ -12,63 +12,80 @@
   }
 
   //concantenate user's name to greeting string.
-  alert("Hi " + userName + "! Nice to meet you! Let's play a guessing game! You will guess 3 things about me!");
+  //this is to insert this line into html 'greeting' id
+  document.getElementById('greeting').innerHTML = "Hi " + userName + "! Nice to meet you! Let's play a guessing game! You will guess 3 things about me!";
 
   //first question
   //variable to store user's answer to question number 1.
-  var answer1 = prompt("Am I taller than 5'6?");
+  function q1() {
+    var answer1 = prompt("Am I taller than 5'6?");
 
-  //use while loop to check for yes or no answer only.
-  //use toLowerCase to convert user's answer to all lowercases.
-  while (answer1.toLowerCase() != "yes" && answer1.toLowerCase() != "no") {
-    alert("Invalid answer! Yes or no answer only please.");
-    answer1 = prompt("Am I taller than 5'6?");
-  }
+    //use while loop to check for yes or no answer only.
+    //use toLowerCase to convert user's answer to all lowercases.
+    while (answer1.toLowerCase() != "yes" && answer1.toLowerCase() != "no") {
+      alert("Invalid answer! Yes or no answer only please.");
+      answer1 = prompt("Am I taller than 5'6?");
+    }
 
-  //use if else statements to give different response based on user answered yes or no.
-  if(answer1.toLowerCase() == "no") {
-    alert("You answered no. That's right, " + userName + "! I am not taller than 5'6!");
-    //add 1 to rightAnsCounter if answer is correct.
-    rightAnsCounter++;
-  } else {
-    alert("You answered yes. That is incorrect, " + userName + ". I am not taller than 5'6. I am 5'5.");
-  }
+    //use if else statements to give different response based on user answered yes or no.
+    if(answer1.toLowerCase() == "no") {
+      document.getElementById('a1').innerHTML = "You answered no. That's right, " + userName + "! I am not taller than 5'6!";
+      //add 1 to rightAnsCounter if answer is correct.
+      rightAnsCounter++;
+    } else {
+     document.getElementById('a1').innerHTML = "You answered yes. That is incorrect, " + userName + ". I am not taller than 5'6. I am 5'5.";
+    }
 
-  //log user input to console.
-  console.log("The user inputted " + answer1 + " to question 1.");
+    //log user input to console.
+    console.log("The user inputted " + answer1 + " to question 1.");
+}
 
+  //call function 1
+  q1();
   //second question
   //repeat coding steps used in question/answer 1.
-  var answer2 = prompt("Do I weigh over 130 pounds?");
-  while (answer2.toLowerCase() != "yes" && answer2.toLowerCase() != "no") {
-    alert("Invalid answer! Yes or no answer only please.");
-    answer2 = prompt("Do I weigh over 130 pounds?");
-  }
-  if(answer2.toLowerCase() == "no") {
-    alert("You answered no. Good guess, " + userName + "! I do not weigh over 130 pounds!");
-    rightAnsCounter++;
-  } else {
-    alert("You answered yes. That is incorrect, " + userName + ". I do not weigh over 130 pounds. I weigh 125 pounds.");
-  }
-  console.log("The user inputted " + answer2 + " to question 2.");
 
-  //third question
-  //repeat coding steps used in question/answer 1.
-  var answer3 = prompt("Am I over 40 years old?");
-  while (answer3.toLowerCase() != "yes" && answer3.toLowerCase() != "no") {
-    alert("Invalid answer! Yes or no answer only please.");
-    answer3 = prompt("Am I over 40 years old?");
-  }
-  if(answer3.toLowerCase() == "yes") {
-    alert("You answered yes. You are correct, " + userName + "! I am over 40 years old!");
-    rightAnsCounter++;
-  } else {
-      alert("You answered no. That is incorrect, " + userName + ". I am over 40 years old. Sorry I can't tell you exactly how old I am!");
-  }
-  console.log("The user inputted " + answer3 + " to question 3.");
+  function q2(){
+    var answer2 = prompt("Do I weigh over 130 pounds?");
+    while (answer2.toLowerCase() != "yes" && answer2.toLowerCase() != "no") {
+      alert("Invalid answer! Yes or no answer only please.");
+      answer2 = prompt("Do I weigh over 130 pounds?");
+    }
+    if(answer2.toLowerCase() == "no") {
+      document.getElementById('a2').innerHTML = "You answered no. Good guess, " + userName + "! I do not weigh over 130 pounds!";
+      rightAnsCounter++;
+    } else {
+      document.getElementById('a2').innerHTML = "You answered yes. That is incorrect, " + userName + ". I do not weigh over 130 pounds. I weigh 125 pounds.";
+    }
+    console.log("The user inputted " + answer2 + " to question 2.");
 
-  //fourth question
-  //variable to counter for how many guesses.
+    //third question
+    //repeat coding steps used in question/answer 1.
+  }
+
+  q2();
+
+  function q3(){
+    var answer3 = prompt("Am I over 40 years old?");
+    while (answer3.toLowerCase() != "yes" && answer3.toLowerCase() != "no") {
+      alert("Invalid answer! Yes or no answer only please.");
+      answer3 = prompt("Am I over 40 years old?");
+    }
+    if(answer3.toLowerCase() == "yes") {
+      document.getElementById('a3').innerHTML = "You answered yes. You are correct, " + userName + "! I am over 40 years old!";
+      rightAnsCounter++;
+    } else {
+        document.getElementById('a3').innerHTML = "You answered no. That is incorrect, " + userName + ". I am over 40 years old. Sorry I can't tell you exactly how old I am!";
+    }
+    console.log("The user inputted " + answer3 + " to question 3.");
+}
+
+q3();
+
+function q4(){
+    //fourth question
+    //variable to counter for how many guesses.
+  
   var guessNumCounter = 0;
 
   //variable to store user's answer to how old question.
@@ -87,20 +104,24 @@
     }
     //if user's answer is 44
     else if(parseInt(howOld, 10) === 44) {
-      alert("You guessed it! I am 44 years old! :( ");
+      document.getElementById('a4').innerHTML = "You guessed it! I am 44 years old! :( ";
       //add 1 to rightAnsCounter
       rightAnsCounter++;
     }
     //if user's answer is greater than 44
     else if (parseInt(howOld, 10) > 44) {
-      alert(howOld + " is too high.");
+      document.getElementById('a4').innerHTML = howOld + " is too high.";
     }
     //user's answer is less than 44 or anything else.
     else {
-      alert(howOld + " is too low.");
+      document.getElementById('a4').innerHTML = howOld + " is too low.";
     }
   }
+}
 
+q4();
+
+function q5(){
   //fifth question
   //same coding steps as question/answer 1.
   var haveFunAns = prompt("Did you enjoy playing this game?");
@@ -113,7 +134,11 @@
   } else {
     alert("I'm sorry you're having such a bad day, " + userName + "!");
   }
+}
 
+q5();
+
+function q6(){
   //sixth question
   alert("Be a sport and guess the answer to one more question!");
 
@@ -140,18 +165,23 @@
     }
     //if user's guessNumAns is equal to random guessNum
     else if(parseInt(guessNumAns, 10) === guessNum) {
-      alert("You got it! The number I'm thinking of is " + guessNum + "!");
+      document.getElementById('a5').innerHTML = "You got it! The number I'm thinking of is " + guessNum + "!";
       rightAnsCounter++;
     }
     //if user's guessNumAns is greater than random guessNum
     else if(parseInt(guessNumAns, 10) > guessNum) {
-      alert(guessNumAns + " is too high.");
+      document.getElementById('a5').innerHTML = guessNumAns + " is too high.";
     }
     else {
     //user's guessNumAns is less than random guessNum or anything else.
-      alert(guessNumAns + " is too low");
+      document.getElementById('a5').innerHTML = guessNumAns + " is too low";
     }
   }
+}
 
+q6();
   //Display how many questions user answered correctly.
-  alert(userName + ", you got " + rightAnsCounter + " correct answers out of 5 questions. Thanks for playing!");
+  document.getElementById('score').innerHTML = userName + ", you got " + rightAnsCounter + " correct answers out of 5 questions. Thanks for playing!";
+
+
+

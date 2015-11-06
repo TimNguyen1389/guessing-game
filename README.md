@@ -28,4 +28,8 @@ Lol!!!... Not sure if I'm retelling the joke correctly, but it was really funny 
 
 Author: Tim Nguyen
 
+Driver: Michael Sweeney
+
+Navigator: Tim Nguyen
+
 
