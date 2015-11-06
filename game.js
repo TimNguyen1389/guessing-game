@@ -16,59 +16,74 @@
 
   //first question
   //variable to store user's answer to question number 1.
-  var answer1 = prompt("Am I taller than 5'6?");
+  function q1() {
+    var answer1 = prompt("Am I taller than 5'6?");
 
-  //use while loop to check for yes or no answer only.
-  //use toLowerCase to convert user's answer to all lowercases.
-  while (answer1.toLowerCase() != "yes" && answer1.toLowerCase() != "no") {
-    alert("Invalid answer! Yes or no answer only please.");
-    answer1 = prompt("Am I taller than 5'6?");
-  }
+    //use while loop to check for yes or no answer only.
+    //use toLowerCase to convert user's answer to all lowercases.
+    while (answer1.toLowerCase() != "yes" && answer1.toLowerCase() != "no") {
+      alert("Invalid answer! Yes or no answer only please.");
+      answer1 = prompt("Am I taller than 5'6?");
+    }
 
-  //use if else statements to give different response based on user answered yes or no.
-  if(answer1.toLowerCase() == "no") {
-    alert("You answered no. That's right, " + userName + "! I am not taller than 5'6!");
-    //add 1 to rightAnsCounter if answer is correct.
-    rightAnsCounter++;
-  } else {
-    alert("You answered yes. That is incorrect, " + userName + ". I am not taller than 5'6. I am 5'5.");
-  }
+    //use if else statements to give different response based on user answered yes or no.
+    if(answer1.toLowerCase() == "no") {
+      alert("You answered no. That's right, " + userName + "! I am not taller than 5'6!");
+      //add 1 to rightAnsCounter if answer is correct.
+      rightAnsCounter++;
+    } else {
+      alert("You answered yes. That is incorrect, " + userName + ". I am not taller than 5'6. I am 5'5.");
+    }
 
-  //log user input to console.
-  console.log("The user inputted " + answer1 + " to question 1.");
+    //log user input to console.
+    console.log("The user inputted " + answer1 + " to question 1.");
+}
 
+  //call function 1
+  q1();
   //second question
   //repeat coding steps used in question/answer 1.
-  var answer2 = prompt("Do I weigh over 130 pounds?");
-  while (answer2.toLowerCase() != "yes" && answer2.toLowerCase() != "no") {
-    alert("Invalid answer! Yes or no answer only please.");
-    answer2 = prompt("Do I weigh over 130 pounds?");
-  }
-  if(answer2.toLowerCase() == "no") {
-    alert("You answered no. Good guess, " + userName + "! I do not weigh over 130 pounds!");
-    rightAnsCounter++;
-  } else {
-    alert("You answered yes. That is incorrect, " + userName + ". I do not weigh over 130 pounds. I weigh 125 pounds.");
-  }
-  console.log("The user inputted " + answer2 + " to question 2.");
 
-  //third question
-  //repeat coding steps used in question/answer 1.
-  var answer3 = prompt("Am I over 40 years old?");
-  while (answer3.toLowerCase() != "yes" && answer3.toLowerCase() != "no") {
-    alert("Invalid answer! Yes or no answer only please.");
-    answer3 = prompt("Am I over 40 years old?");
-  }
-  if(answer3.toLowerCase() == "yes") {
-    alert("You answered yes. You are correct, " + userName + "! I am over 40 years old!");
-    rightAnsCounter++;
-  } else {
-      alert("You answered no. That is incorrect, " + userName + ". I am over 40 years old. Sorry I can't tell you exactly how old I am!");
-  }
-  console.log("The user inputted " + answer3 + " to question 3.");
+  function q2(){
+    var answer2 = prompt("Do I weigh over 130 pounds?");
+    while (answer2.toLowerCase() != "yes" && answer2.toLowerCase() != "no") {
+      alert("Invalid answer! Yes or no answer only please.");
+      answer2 = prompt("Do I weigh over 130 pounds?");
+    }
+    if(answer2.toLowerCase() == "no") {
+      alert("You answered no. Good guess, " + userName + "! I do not weigh over 130 pounds!");
+      rightAnsCounter++;
+    } else {
+      alert("You answered yes. That is incorrect, " + userName + ". I do not weigh over 130 pounds. I weigh 125 pounds.");
+    }
+    console.log("The user inputted " + answer2 + " to question 2.");
 
-  //fourth question
-  //variable to counter for how many guesses.
+    //third question
+    //repeat coding steps used in question/answer 1.
+  }
+  q2();
+
+  function q3(){
+    var answer3 = prompt("Am I over 40 years old?");
+    while (answer3.toLowerCase() != "yes" && answer3.toLowerCase() != "no") {
+      alert("Invalid answer! Yes or no answer only please.");
+      answer3 = prompt("Am I over 40 years old?");
+    }
+    if(answer3.toLowerCase() == "yes") {
+      alert("You answered yes. You are correct, " + userName + "! I am over 40 years old!");
+      rightAnsCounter++;
+    } else {
+        alert("You answered no. That is incorrect, " + userName + ". I am over 40 years old. Sorry I can't tell you exactly how old I am!");
+    }
+    console.log("The user inputted " + answer3 + " to question 3.");
+}
+
+q3();
+
+function q4(){
+    //fourth question
+    //variable to counter for how many guesses.
+  
   var guessNumCounter = 0;
 
   //variable to store user's answer to how old question.
@@ -100,7 +115,10 @@
       alert(howOld + " is too low.");
     }
   }
+}
+q4();
 
+function q5(){
   //fifth question
   //same coding steps as question/answer 1.
   var haveFunAns = prompt("Did you enjoy playing this game?");
@@ -113,7 +131,11 @@
   } else {
     alert("I'm sorry you're having such a bad day, " + userName + "!");
   }
+}
 
+q5();
+
+function q6(){
   //sixth question
   alert("Be a sport and guess the answer to one more question!");
 
@@ -152,6 +174,10 @@
       alert(guessNumAns + " is too low");
     }
   }
-
+}
+q6();
   //Display how many questions user answered correctly.
   alert(userName + ", you got " + rightAnsCounter + " correct answers out of 5 questions. Thanks for playing!");
+
+
+
