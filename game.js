@@ -12,6 +12,7 @@
   }
 
   //concantenate user's name to greeting string.
+  //this is to insert this line into html 'greeting' id
   document.getElementById('greeting').innerHTML = "Hi " + userName + "! Nice to meet you! Let's play a guessing game! You will guess 3 things about me!";
 
   //first question
@@ -61,6 +62,7 @@
     //third question
     //repeat coding steps used in question/answer 1.
   }
+
   q2();
 
   function q3(){
@@ -116,6 +118,7 @@ function q4(){
     }
   }
 }
+
 q4();
 
 function q5(){
@@ -175,6 +178,7 @@ function q6(){
     }
   }
 }
+
 q6();
   //Display how many questions user answered correctly.
   document.getElementById('score').innerHTML = userName + ", you got " + rightAnsCounter + " correct answers out of 5 questions. Thanks for playing!";
