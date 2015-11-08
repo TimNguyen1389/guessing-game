@@ -42,12 +42,14 @@
     if(answer1.toLowerCase() == "no") {
       document.getElementById('a1').innerHTML = "You answered no. That's right, " + userName + "! I am not taller than 5'6!";
       document.getElementById('a1-right').className = 'show';
+      document.getElementById('a1').className = 'green';
 
       //add 1 to rightAnsCounter if answer is correct.
       rightAnsCounter++;
     } else {
      document.getElementById('a1').innerHTML = "You answered yes. That is incorrect, " + userName + ". I am not taller than 5'6. I am 5'5.";
     document.getElementById('a1-wrong').className = 'show';
+    document.getElementById('a1').className = 'red';
     }
 
     //log user input to console.
@@ -68,10 +70,12 @@
     if(answer2.toLowerCase() == "no") {
       document.getElementById('a2').innerHTML = "You answered no. Good guess, " + userName + "! I do not weigh over 130 pounds!";
       document.getElementById('a2-right').className = 'show';
+      document.getElementById('a2').className = 'green';
       rightAnsCounter++;
     } else {
       document.getElementById('a2').innerHTML = "You answered yes. That is incorrect, " + userName + ". I do not weigh over 130 pounds. I weigh 125 pounds.";
       document.getElementById('a2-wrong').className = 'show';
+      document.getElementById('a2').className = 'red';
     }
     console.log("The user inputted " + answer2 + " to question 2.");
 
@@ -90,10 +94,12 @@
     if(answer3.toLowerCase() == "yes") {
       document.getElementById('a3').innerHTML = "You answered yes. You are correct, " + userName + "! I am over 40 years old!";
       document.getElementById('a3-right').className = 'show';
+      document.getElementById('a3').className = 'green';
       rightAnsCounter++;
     } else {
         document.getElementById('a3').innerHTML = "You answered no. That is incorrect, " + userName + ". I am over 40 years old. Sorry I can't tell you exactly how old I am!";
         document.getElementById('a3-wrong').className = 'show';
+        document.getElementById('a3').className = 'red';
     }
     console.log("The user inputted " + answer3 + " to question 3.");
 }
