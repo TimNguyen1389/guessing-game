@@ -6,7 +6,7 @@
   console.log("The user's name is " + userName);
 
   //use while loop to check for empty value/string.
-  while (userName === false) {
+  while (userName === "") {
     alert("Oops! You forgot to enter your name.");
     userName = prompt("What is your name?");
   }
@@ -85,7 +85,7 @@ q3();
 function q4(){
     //fourth question
     //variable to counter for how many guesses.
-  
+
   var guessNumCounter = 0;
 
   //variable to store user's answer to how old question.
