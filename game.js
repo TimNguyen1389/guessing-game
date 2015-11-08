@@ -1,3 +1,7 @@
+//function to start whole game
+function startGame(){
+
+
   //variable to store counter for correct answers.
   var rightAnsCounter = 0;
 
@@ -15,25 +19,41 @@
   //this is to insert this line into html 'greeting' id
   document.getElementById('greeting').innerHTML = "Hi " + userName + "! Nice to meet you! Let's play a guessing game! You will guess 3 things about me!";
 
+//create Q and A arrays
+  var answer1, answer2, answer3;
+
+  var questions = ["Am I taller than 5'6?", 
+                  "Do I weigh over 130 pounds?",
+                  "Am I over 40 years old?"];
+
+  var answers = [answer1, answer2, answer3];
+
+
+
   //first question
   //variable to store user's answer to question number 1.
   function q1() {
-    var answer1 = prompt("Am I taller than 5'6?");
+    var answer1 = prompt(questions[0]);
 
     //use while loop to check for yes or no answer only.
     //use toLowerCase to convert user's answer to all lowercases.
     while (answer1.toLowerCase() != "yes" && answer1.toLowerCase() != "no") {
       alert("Invalid answer! Yes or no answer only please.");
-      answer1 = prompt("Am I taller than 5'6?");
+      answer1 = prompt(questions[0]);
     }
 
     //use if else statements to give different response based on user answered yes or no.
     if(answer1.toLowerCase() == "no") {
       document.getElementById('a1').innerHTML = "You answered no. That's right, " + userName + "! I am not taller than 5'6!";
+      document.getElementById('a1-right').className = 'show';
+      document.getElementById('a1').className = 'green';
+
       //add 1 to rightAnsCounter if answer is correct.
       rightAnsCounter++;
     } else {
      document.getElementById('a1').innerHTML = "You answered yes. That is incorrect, " + userName + ". I am not taller than 5'6. I am 5'5.";
+    document.getElementById('a1-wrong').className = 'show';
+    document.getElementById('a1').className = 'red';
     }
 
     //log user input to console.
@@ -46,16 +66,20 @@
   //repeat coding steps used in question/answer 1.
 
   function q2(){
-    var answer2 = prompt("Do I weigh over 130 pounds?");
+    var answer2 = prompt(questions[1]);
     while (answer2.toLowerCase() != "yes" && answer2.toLowerCase() != "no") {
       alert("Invalid answer! Yes or no answer only please.");
-      answer2 = prompt("Do I weigh over 130 pounds?");
+      answer2 = prompt(questions[1]);
     }
     if(answer2.toLowerCase() == "no") {
       document.getElementById('a2').innerHTML = "You answered no. Good guess, " + userName + "! I do not weigh over 130 pounds!";
+      document.getElementById('a2-right').className = 'show';
+      document.getElementById('a2').className = 'green';
       rightAnsCounter++;
     } else {
       document.getElementById('a2').innerHTML = "You answered yes. That is incorrect, " + userName + ". I do not weigh over 130 pounds. I weigh 125 pounds.";
+      document.getElementById('a2-wrong').className = 'show';
+      document.getElementById('a2').className = 'red';
     }
     console.log("The user inputted " + answer2 + " to question 2.");
 
@@ -66,16 +90,20 @@
   q2();
 
   function q3(){
-    var answer3 = prompt("Am I over 40 years old?");
+    var answer3 = prompt(questions[2]);
     while (answer3.toLowerCase() != "yes" && answer3.toLowerCase() != "no") {
       alert("Invalid answer! Yes or no answer only please.");
-      answer3 = prompt("Am I over 40 years old?");
+      answer3 = prompt(questions[2]);
     }
     if(answer3.toLowerCase() == "yes") {
       document.getElementById('a3').innerHTML = "You answered yes. You are correct, " + userName + "! I am over 40 years old!";
+      document.getElementById('a3-right').className = 'show';
+      document.getElementById('a3').className = 'green';
       rightAnsCounter++;
     } else {
         document.getElementById('a3').innerHTML = "You answered no. That is incorrect, " + userName + ". I am over 40 years old. Sorry I can't tell you exactly how old I am!";
+        document.getElementById('a3-wrong').className = 'show';
+        document.getElementById('a3').className = 'red';
     }
     console.log("The user inputted " + answer3 + " to question 3.");
 }
@@ -183,5 +211,5 @@ q6();
   //Display how many questions user answered correctly.
   document.getElementById('score').innerHTML = userName + ", you got " + rightAnsCounter + " correct answers out of 5 questions. Thanks for playing!";
 
-
+}
 
