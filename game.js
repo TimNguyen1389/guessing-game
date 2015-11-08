@@ -22,13 +22,11 @@ function startGame(){
 //create Q and A arrays
   var answer1, answer2, answer3;
 
-  var questions = ["Am I taller than 5'6?", 
-                  "Do I weigh over 130 pounds?",
-                  "Am I over 40 years old?"];
+  var questions = ["Am I taller than 5'6?",
+                   "Do I weigh over 130 pounds?",
+                   "Am I over 40 years old?"];
 
   var answers = [answer1, answer2, answer3];
-
-
 
   //first question
   //variable to store user's answer to question number 1.
@@ -51,9 +49,9 @@ function startGame(){
       //add 1 to rightAnsCounter if answer is correct.
       rightAnsCounter++;
     } else {
-     document.getElementById('a1').innerHTML = "You answered yes. That is incorrect, " + userName + ". I am not taller than 5'6. I am 5'5.";
-    document.getElementById('a1-wrong').className = 'show';
-    document.getElementById('a1').className = 'red';
+      document.getElementById('a1').innerHTML = "You answered yes. That is incorrect, " + userName + ". I am not taller than 5'6. I am 5'5.";
+      document.getElementById('a1-wrong').className = 'show';
+      document.getElementById('a1').className = 'red';
     }
 
     //log user input to console.
