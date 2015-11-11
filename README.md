@@ -9,9 +9,9 @@
 - You will receive a response after each answer.
 - Your score will be given to you at the end of the game.
 - Questions are presented in a prompt box.
-- Responses are presented in an alert box.
+- Responses are displayed on web page.
 
-**Start the game by loading the index.html file!**
+**Start the game by clicking on the "Click Me to Start Game" button!**
 
 www.w3schools.com and JavaScript & JQuery by Jon Duckett are used as references when I am stuck.
 
