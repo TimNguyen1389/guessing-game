@@ -1,5 +1,5 @@
 //function to start whole game
-function startGame(){
+document.getElementById('gameBtn').addEventListener('click', function(){
 
 
   //variable to store counter for correct answers.
@@ -209,5 +209,5 @@ q6();
   //Display how many questions user answered correctly.
   document.getElementById('score').innerHTML = userName + ", you got " + rightAnsCounter + " correct answers out of 5 questions. Thanks for playing!";
 
-}
+})
 
